@@ -1,0 +1,341 @@
+<!DOCTYPE html><!--[if IE]>  <html class="ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="矩阵与递推.pdf_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_01.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_01.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:57.1058em;top: 36.2062em; "><span class="stl_07 stl_08 stl_09">blue &nbsp;</span></div>
+					<div class="stl_01" style="left:31.7242em;top: 35.0707em; "><span class="stl_10 stl_11 stl_12">矩阵与递推 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_02.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_02.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">斐波那契数列 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:11; "><span class="stl_15 stl_11 stl_16">已知： &nbsp;</span></div>
+					<div class="stl_01" style="left:8.192em;top: 18.7919em; z-index:18; "><span class="stl_17 stl_18 stl_19">푎</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:0.189em;">1 </span></sub><span class="stl_17 stl_18 stl_22" style="word-spacing:0.0271em;">= 푎</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:0.189em;">2 </span></sub><span class="stl_17 stl_18 stl_21" style="word-spacing:0.0287em;">= ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:8.192em;top: 22.4919em; "><span class="stl_17 stl_18 stl_23">푎</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:0.2229em;">푖 </span></sub><span class="stl_17 stl_18 stl_22" style="word-spacing:0.0228em;">= 푎</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_24" style="word-spacing:0.073em;">푖−1 </span></sub><span class="stl_17 stl_18 stl_22" style="word-spacing:-0.0287em;">+ 푎</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_25">푖−2 &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:7.02em;top: 29.8644em; "><span class="stl_15 stl_11 stl_23">求</span><span class="stl_17 stl_18 stl_22">푎</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_26">푛</span></sub><span class="stl_15 stl_11 stl_27">。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_03.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_03.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_28">问题 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:32; "><span class="stl_15 stl_11 stl_29">有一些递推数列，很难推出通项公式。往往以</span><span class="stl_17 stl_18 stl_30">푂(ꢁ)</span><span class="stl_15 stl_11 stl_31">的时间复 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 17.9501em; z-index:38; "><span class="stl_32 stl_11 stl_29">杂度来硬算。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 21.6335em; z-index:61; "><span class="stl_15 stl_11 stl_33">但是，如果只询问某个项的值，线性时间的算法将会</span><span class="stl_34 stl_11 stl_31">浪费大量 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 24.1518em; z-index:68; "><span class="stl_35 stl_11 stl_36">时间</span><span class="stl_32 stl_11 stl_36">。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 31.2144em; z-index:88; "><span class="stl_15 stl_11 stl_37">有没有优化的办法，让它只占用</span><span class="stl_17 stl_18 stl_38" style="word-spacing:0.2112em;">푂 푙표푔</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:0.3888em;">푛 </span></sub><span class="stl_15 stl_11 stl_39">的时间复杂度？ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_04.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_04.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:57.1058em;top: 36.4973em; "><span class="stl_40 stl_11 stl_31">数学基础 &nbsp;</span></div>
+					<div class="stl_01" style="left:49.0658em;top: 35.0707em; "><span class="stl_10 stl_11 stl_21">群</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_05.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_05.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_41">群的定义 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:19; "><span class="stl_34 stl_11 stl_09">集合</span><span class="stl_42 stl_18 stl_43">퐺</span><span class="stl_15 stl_11 stl_21">和在</span><span class="stl_17 stl_18 stl_43">퐺</span><span class="stl_15 stl_11 stl_44">上的</span><span class="stl_34 stl_11 stl_33">二元运算</span><span class="stl_42 stl_18 stl_45">⨂</span><span class="stl_15 stl_11 stl_22">，且具有： &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 18.8019em; z-index:38; "><span class="stl_46 stl_11 stl_09">1.</span><span class="stl_47 stl_11 stl_21" style="word-spacing:0.75em;">封闭性 </span><span class="stl_17 stl_18 stl_48">a⨂푏</span><span class="stl_15 stl_11 stl_49">一定在</span><span class="stl_17 stl_18 stl_43">퐺</span><span class="stl_15 stl_11 stl_50">内</span><span class="stl_46 stl_11 stl_50">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.4919em; z-index:57; "><span class="stl_46 stl_11 stl_09">2.</span><span class="stl_47 stl_11 stl_21" style="word-spacing:1.1663em;">结合律 </span><span class="stl_17 stl_18 stl_51" style="word-spacing:0.1111em;">a⨂푏 ⨂푐 = 푎⨂ 푏⨂푐 </span><span class="stl_46 stl_11 stl_51" style="word-spacing:0.1111em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.1744em; z-index:80; "><span class="stl_46 stl_11 stl_09">3.</span><span class="stl_47 stl_11 stl_21" style="word-spacing:0.75em;">单位元 </span><span class="stl_17 stl_18 stl_52">G</span><span class="stl_15 stl_11 stl_49">内存在</span><span class="stl_17 stl_18 stl_53">푒</span><span class="stl_15 stl_11 stl_37">，使得</span><span class="stl_17 stl_18 stl_54" style="word-spacing:0.0209em;">a⨂푒 = 푒⨂푎 = 푎</span><span class="stl_46 stl_11 stl_54" style="word-spacing:0.0209em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 29.8644em; "><span class="stl_46 stl_11 stl_09">4.</span><span class="stl_47 stl_11 stl_21" style="word-spacing:1.7543em;">逆元 </span><span class="stl_15 stl_11 stl_45">对于每一个</span><span class="stl_17 stl_18 stl_31">a</span><span class="stl_15 stl_11 stl_21">，存在</span><span class="stl_17 stl_18 stl_16">b</span><span class="stl_15 stl_11 stl_55">，使得</span><span class="stl_17 stl_18 stl_56" style="word-spacing:0.0256em;">a⨂푏 = b⨂푎 = 푒</span><span class="stl_46 stl_11 stl_56" style="word-spacing:0.0256em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 37.236em; z-index:109; "><span class="stl_15 stl_11 stl_09">则称</span><span class="stl_17 stl_18 stl_57" style="word-spacing:-0.1119em;">(퐺, ⨂)</span><span class="stl_15 stl_11 stl_22">是一个群。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_06.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_06.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_41">几个例子 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_33">请回答： &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.4919em; z-index:25; "><span class="stl_46 stl_11 stl_09">1.</span><span class="stl_15 stl_11 stl_21">指出</span><span class="stl_17 stl_18 stl_58">(푍,×)</span><span class="stl_15 stl_11 stl_45">的单位元和</span><span class="stl_17 stl_18 stl_59">푎</span><span class="stl_15 stl_11 stl_31">的逆元。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.6344em; "><span class="stl_34 stl_11 stl_33" style="word-spacing:0.2505em;">单位元： </span><span class="stl_42 stl_18 stl_33" style="word-spacing:0.2505em;">ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:24.6442em;top: 26.846em; z-index:39; "><span class="stl_34 stl_11 stl_37">逆元：</span><sub style="top: 1.17em;"><span class="stl_60 stl_18 stl_61">ꢂ</span></sub><sup style="top: -1.3725em;"><span class="stl_62 stl_18 stl_63">1 &nbsp;</span></sup></div>
+					<div class="stl_01" style="left:7.02em;top: 34.606em; z-index:59; "><span class="stl_46 stl_11 stl_09">2.</span><span class="stl_15 stl_11 stl_21">指出</span><span class="stl_17 stl_18 stl_64" style="word-spacing:-0.0957em;">(푍, ꢃ)</span><span class="stl_15 stl_11 stl_45">的单位元和</span><span class="stl_17 stl_18 stl_59">푎</span><span class="stl_15 stl_11 stl_37">的逆元。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 38.296em; "><span class="stl_34 stl_11 stl_45" style="word-spacing:0.1654em;">不是群，因为不满足结合律。 </span><span class="stl_42 stl_18 stl_21" style="word-spacing:-0.0133em;">푎 ꢃ 푏</span><span class="stl_42 stl_18 stl_21" style="word-spacing:0.4127em;">&nbsp;</span><span class="stl_42 stl_18 stl_21" style="word-spacing:-0.0314em;">ꢃ 푐</span><span class="stl_42 stl_18 stl_21" style="word-spacing:0.2815em;">&nbsp;</span><span class="stl_42 stl_18 stl_65" style="word-spacing:-0.0427em;">≠ 푎 ꢃ (푏 ꢃ 푐) &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_07.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_07.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_65">有用的性质 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_55">凡是乘法意义下的群都可以快速幂。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; z-index:31; "><span class="stl_15 stl_11 stl_36">想一想，为什么？ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; z-index:39; "><span class="stl_34 stl_11 stl_33">因为满足结合律。 &nbsp;</span></div>
+					<div class="stl_01" style="left:9.7517em;top: 32.5525em; "><span class="stl_66 stl_18 stl_21" style="word-spacing:-0.0238em;">ꢄ × ꢄ × ꢄ × ꢄ × ꢄ × ꢄ × ꢄ × ꢄ =</span><span class="stl_66 stl_18 stl_21" style="word-spacing:0.4445em;">&nbsp;</span><span class="stl_66 stl_18 stl_21" style="word-spacing:-0.0278em;">ꢄ × ꢄ × ꢄ × ꢄ</span><span class="stl_66 stl_18 stl_21" style="word-spacing:0.3895em;">&nbsp;</span><span class="stl_66 stl_18 stl_21" style="word-spacing:0.3907em;">× ꢄ</span><span class="stl_66 stl_18 stl_21" style="word-spacing:-0.0318em;">&nbsp;</span><span class="stl_66 stl_18 stl_21" style="word-spacing:-0.027em;">× ꢄ × ꢄ × ꢄ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_08.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_08.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_65">矩阵群 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; "><span class="stl_15 stl_11 stl_33">对于矩阵</span><span class="stl_17 stl_18 stl_50">M</span><span class="stl_15 stl_11 stl_45">和矩阵乘法</span><span class="stl_17 stl_18 stl_67">×</span><span class="stl_15 stl_11 stl_50">，</span><span class="stl_17 stl_18 stl_29">(M,×)</span><span class="stl_15 stl_11 stl_68">是一个群。 &nbsp;</span></div>
+					<div class="stl_01" style="left:16.3517em;top: 25.51em; z-index:34; "><span class="stl_66 stl_18 stl_21" style="word-spacing:0.7507em;">ꢀ 0 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:16.3517em;top: 28.2444em; z-index:37; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7521em;">0 ꢀ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 28.346em; "><span class="stl_15 stl_11 stl_55">单位元： &nbsp;</span></div>
+					<div class="stl_01" style="left:42.3958em;top: 28.1344em; "><span class="stl_15 stl_11 stl_37">逆元：逆矩阵</span><span class="stl_17 stl_18 stl_69">푀</span><sup style="top: -0.85em;"><span class="stl_20 stl_18 stl_70">−1 &nbsp;</span></sup></div>
+					<div class="stl_01" style="left:16.3517em;top: 30.9844em; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7521em;">0 0 ꢀ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_09.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_09.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_65">关于单位元 &nbsp;</span></div>
+					<div class="stl_01" style="left:8.192em;top: 15.1102em; z-index:18; "><span class="stl_17 stl_18 stl_71">N</span><span class="stl_15 stl_11 stl_29">阶矩阵的单位元是</span><span class="stl_17 stl_18 stl_72">N</span><span class="stl_15 stl_11 stl_50">阶</span><span class="stl_34 stl_11 stl_33">单位矩阵</span><span class="stl_15 stl_11 stl_33">。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.4919em; z-index:41; "><span class="stl_15 stl_11 stl_29">单位矩阵：对角线是</span><span class="stl_17 stl_18 stl_73">ꢀ</span><span class="stl_15 stl_11 stl_45">，其余以</span><span class="stl_17 stl_18 stl_73">0</span><span class="stl_15 stl_11 stl_16">填充。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; "><span class="stl_15 stl_11 stl_70">容易发现，</span><span class="stl_34 stl_11 stl_74">对应的单位矩阵乘以矩阵，总是得到原矩阵。 &nbsp;</span></div>
+					<div class="stl_01" style="left:55.2258em;top: 32.8925em; z-index:83; "><span class="stl_66 stl_18 stl_21" style="word-spacing:0.7513em;">ꢀ 0 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:55.2258em;top: 35.6261em; z-index:86; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7526em;">0 ꢀ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:55.2258em;top: 38.366em; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7526em;">0 0 ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:33.9742em;top: 34.2561em; z-index:75; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7499em;">ꢀ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:33.9742em;top: 36.996em; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7499em;">0 ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 35.516em; "><span class="stl_46 stl_11 stl_75">1</span><span class="stl_15 stl_11 stl_21" style="word-spacing:0.252em;">阶： </span><span class="stl_17 stl_18 stl_21" style="word-spacing:0.252em;">ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:26.9742em;top: 35.7277em; "><span class="stl_46 stl_11 stl_44">2</span><span class="stl_15 stl_11 stl_21">阶： &nbsp;</span></div>
+					<div class="stl_01" style="left:48.2358em;top: 35.7277em; z-index:78; "><span class="stl_46 stl_11 stl_76">3</span><span class="stl_15 stl_11 stl_50">阶： &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_10.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_10.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_65">矩阵快速幂 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_49">刚刚说过，凡是乘法运算群都可以快速幂。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 19.1135em; "><span class="stl_15 stl_11 stl_77">矩阵也一样。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; "><span class="stl_15 stl_11 stl_36">代码？和平常的快速幂一样写，重载一下乘号。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_11.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_11.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_28">加速 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_33">学会了矩阵的快速幂，我们不由开始想…… &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; "><span class="stl_34 stl_11 stl_49">能不能用矩阵乘法的快速幂，来加速递推？ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_12.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_12.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:57.1058em;top: 36.4973em; "><span class="stl_40 stl_11 stl_78">加速递推的工具 &nbsp;</span></div>
+					<div class="stl_01" style="left:36.0542em;top: 35.0707em; "><span class="stl_10 stl_11 stl_79">递推矩阵 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_13.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_13.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_28">斐波那契数列 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_70">回到最初的问题。如何构造斐波那契数列的加速？ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; "><span class="stl_15 stl_11 stl_31">提示：构造 &nbsp;</span></div>
+					<div class="stl_01" style="left:35.8017em;top: 26.8211em; z-index:54; "><span class="stl_80 stl_18 stl_21" style="word-spacing:0.7457em;">ꢀ ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:35.8017em;top: 29.9547em; "><span class="stl_81 stl_18 stl_21" style="word-spacing:0.7469em;">ꢀ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:19.1917em;top: 28.7344em; z-index:39; "><span class="stl_17 stl_18 stl_21" style="word-spacing:1.0877em;">퐹 </span><span class="stl_17 stl_18 stl_82">퐹</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_83">푛−1 &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:48.8658em;top: 28.7344em; z-index:50; "><span class="stl_17 stl_18 stl_84">퐹</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_83" style="word-spacing:1.166em;">푛ꢅ1 </span></sub><span class="stl_17 stl_18 stl_58" style="word-spacing:0.8507em;">퐹 &nbsp;</span></div>
+					<div class="stl_01" style="left:45.6558em;top: 28.8644em; "><span class="stl_17 stl_18 stl_21">=</span></div>
+					<div class="stl_01" style="left:30.2142em;top: 28.8644em; "><span class="stl_17 stl_18 stl_21">×</span></div>
+					<div class="stl_01" style="left:20.1517em;top: 29.813em; z-index:38; "><span class="stl_85 stl_18 stl_21">푛</span></div>
+					<div class="stl_01" style="left:56.7858em;top: 29.813em; z-index:51; "><span class="stl_85 stl_18 stl_21">푛</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_14.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_14.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_28">解决 &nbsp;</span></div>
+					<div class="stl_01" style="left:21.8417em;top: 14.9802em; z-index:14; "><span class="stl_17 stl_18 stl_21" style="word-spacing:1.1102em;">퐹 퐹 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.3218em; "><span class="stl_15 stl_11 stl_77">设置初始矩阵 &nbsp;</span></div>
+					<div class="stl_01" style="left:29.4542em;top: 15.3218em; "><span class="stl_15 stl_11 stl_31">。那么： &nbsp;</span></div>
+					<div class="stl_01" style="left:23.0117em;top: 16.0588em; z-index:13; "><span class="stl_85 stl_18 stl_21">2</span></div>
+					<div class="stl_01" style="left:27.5542em;top: 16.0588em; z-index:15; "><span class="stl_85 stl_18 stl_21">1</span></div>
+					<div class="stl_01" style="left:53.1858em;top: 21.0805em; "><span class="stl_85 stl_18 stl_86">푛−1 &nbsp;</span></div>
+					<div class="stl_01" style="left:47.4258em;top: 21.5319em; z-index:36; "><span class="stl_42 stl_18 stl_21" style="word-spacing:0.7499em;">ꢀ ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:47.4258em;top: 24.27em; "><span class="stl_87 stl_18 stl_21" style="word-spacing:0.7486em;">ꢀ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:21.3917em;top: 22.6619em; z-index:23; "><span class="stl_17 stl_18 stl_21" style="word-spacing:1.0844em;">퐹 </span><span class="stl_17 stl_18 stl_84">퐹</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_86">푛−1 &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:35.7442em;top: 22.6619em; z-index:31; "><span class="stl_17 stl_18 stl_84">퐹</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:1.1832em;">2 </span></sub><span class="stl_17 stl_18 stl_21" style="word-spacing:0.8632em;">퐹 &nbsp;</span></div>
+					<div class="stl_01" style="left:32.0242em;top: 22.7919em; "><span class="stl_17 stl_18 stl_21">=</span></div>
+					<div class="stl_01" style="left:44.3858em;top: 22.7919em; "><span class="stl_17 stl_18 stl_21">×</span></div>
+					<div class="stl_01" style="left:22.3517em;top: 23.7405em; z-index:22; "><span class="stl_85 stl_18 stl_21">푛</span></div>
+					<div class="stl_01" style="left:41.4558em;top: 23.7405em; z-index:32; "><span class="stl_85 stl_18 stl_21">1</span></div>
+					<div class="stl_01" style="left:7.02em;top: 31.0344em; z-index:51; "><span class="stl_15 stl_11 stl_33">顺利完成</span><span class="stl_17 stl_18 stl_88">O(푙표푔</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_26">푛</span></sub><span class="stl_17 stl_18 stl_89">)</span><span class="stl_15 stl_11 stl_39">复杂度的求斐波那契数。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_15.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_15.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_65">另一种 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.3118em; "><span class="stl_15 stl_11 stl_49">更好看的版本： &nbsp;</span></div>
+					<div class="stl_01" style="left:49.7658em;top: 20.8605em; "><span class="stl_85 stl_18 stl_21">푛</span></div>
+					<div class="stl_01" style="left:27.1142em;top: 21.0419em; z-index:14; "><span class="stl_17 stl_18 stl_84">퐹</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_86">푛ꢅ1 &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:35.2942em;top: 21.0419em; z-index:18; "><span class="stl_17 stl_18 stl_21">퐹</span></div>
+					<div class="stl_01" style="left:43.9958em;top: 21.3119em; z-index:29; "><span class="stl_17 stl_18 stl_21" style="word-spacing:0.7542em;">ꢀ ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:43.9958em;top: 24.05em; "><span class="stl_66 stl_18 stl_21" style="word-spacing:0.7529em;">ꢀ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:36.2542em;top: 22.1205em; z-index:19; "><span class="stl_85 stl_18 stl_21">푛</span></div>
+					<div class="stl_01" style="left:40.2442em;top: 22.5719em; "><span class="stl_17 stl_18 stl_21">=</span></div>
+					<div class="stl_01" style="left:28.3342em;top: 23.83em; z-index:22; "><span class="stl_66 stl_18 stl_21" style="word-spacing:1.6049em;">퐹 </span><span class="stl_66 stl_18 stl_90">퐹</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_83">푛−1 &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:29.2942em;top: 24.9105em; z-index:21; "><span class="stl_85 stl_18 stl_21">푛</span></div>
+					<div class="stl_01" style="left:7.02em;top: 31.386em; "><span class="stl_15 stl_11 stl_68">忘记怎么推出来的了…… &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_16.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_16.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_65">汉诺塔问题 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:10; "><span class="stl_15 stl_11 stl_23">令</span><span class="stl_17 stl_18 stl_91">퐻</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_26">푛</span></sub><span class="stl_15 stl_11 stl_44">为解</span><span class="stl_17 stl_18 stl_92">ꢁ</span><span class="stl_15 stl_11 stl_22">层汉诺塔所需要的移动次数。已知： &nbsp;</span></div>
+					<div class="stl_01" style="left:30.5042em;top: 21.4919em; z-index:34; "><span class="stl_17 stl_18 stl_91">퐻</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:0.2065em;">푛 </span></sub><span class="stl_17 stl_18 stl_93" style="word-spacing:0.0872em;">= ꢄ퐻</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_94" style="word-spacing:0.0885em;">푛−1 </span></sub><span class="stl_17 stl_18 stl_21" style="word-spacing:-0.0271em;">+ ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 25.4918em; z-index:49; "><span class="stl_32 stl_11 stl_95">试</span><span class="stl_35 stl_11 stl_78">构造矩阵</span><span class="stl_32 stl_11 stl_21">加速递推。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 29.176em; z-index:67; "><span class="stl_15 stl_11 stl_36">（虽然我知道你们能推出通项公式</span><span class="stl_46 stl_11 stl_96">QAQ</span><span class="stl_15 stl_11 stl_96">） &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_17.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_17.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_28">思路 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.3118em; "><span class="stl_15 stl_11 stl_33">看黑板。 &nbsp;</span></div>
+					<div class="stl_01" style="left:35.1883em;top: 19.5846em; z-index:23; "><span class="stl_81 stl_18 stl_21" style="word-spacing:0.7469em;">ꢄ 0 &nbsp;</span></div>
+					<div class="stl_01" style="left:35.1883em;top: 22.7128em; "><span class="stl_80 stl_18 stl_21" style="word-spacing:0.7457em;">ꢀ ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:20.8317em;top: 21.3619em; z-index:11; "><span class="stl_17 stl_18 stl_91">퐻</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_21" style="word-spacing:1.1962em;">푛 </span></sub><span class="stl_17 stl_18 stl_21" style="word-spacing:0.8727em;">ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:47.7458em;top: 21.3619em; z-index:16; "><span class="stl_17 stl_18 stl_91">퐻</span><sub style="top: 0.48em;"><span class="stl_20 stl_18 stl_86" style="word-spacing:1.1601em;">푛ꢅ1 </span></sub><span class="stl_17 stl_18 stl_48" style="word-spacing:0.8464em;">ꢀ &nbsp;</span></div>
+					<div class="stl_01" style="left:44.5458em;top: 21.4919em; "><span class="stl_17 stl_18 stl_21">=</span></div>
+					<div class="stl_01" style="left:29.0942em;top: 21.4919em; "><span class="stl_17 stl_18 stl_21">×</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_18.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_18.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_28">总结 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_36">看到递推而且只需要推一个项的题目，可以考虑这样做： &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; z-index:51; "><span class="stl_46 stl_11 stl_09">1.</span><span class="stl_15 stl_11 stl_74">先求出递推公式，尝试求出容易计算的通项。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; z-index:76; "><span class="stl_46 stl_11 stl_09">2.</span><span class="stl_15 stl_11 stl_23">如果没办法求出容易计算的通项，就构造矩阵加速。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 33.8643em; z-index:96; "><span class="stl_32 stl_11 stl_39" style="word-spacing:0.2461em;">如何构造矩阵？好的构造 </span><span class="stl_97 stl_11 stl_21" style="word-spacing:-0.0009em;">= </span><span class="stl_32 stl_11 stl_98" style="word-spacing:0.2576em;">经验 </span><span class="stl_97 stl_11 stl_21" style="word-spacing:-0.0051em;">+ </span><span class="stl_32 stl_11 stl_99">数学直觉。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="矩阵与递推.pdf_files/img_19.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="矩阵与递推.pdf_files/img_19.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:57.1058em;top: 36.2062em; "><span class="stl_07 stl_08 stl_09">blue &nbsp;</span></div>
+					<div class="stl_01" style="left:46.6458em;top: 35.0648em; "><span class="stl_100 stl_11 stl_101">END &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
