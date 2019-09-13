@@ -1,0 +1,344 @@
+<!DOCTYPE html><!--[if IE]>  <html class="ie"> <![endif]-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>
+		</title>
+		<link rel="stylesheet" type="text/css" href="导数.pdf_files/style.css" />
+	</head>
+	<body>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_01.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_01.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:57.1058em;top: 36.2062em; "><span class="stl_07 stl_08 stl_09">blue &nbsp;</span></div>
+					<div class="stl_01" style="left:44.7258em;top: 35.0707em; "><span class="stl_10 stl_11 stl_12">导数 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_02.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_02.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">注意 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:16; "><span class="stl_15 stl_11 stl_16">由于时间有限，这篇课件中</span><span class="stl_17 stl_11 stl_18">不会</span><span class="stl_15 stl_11 stl_19">对极限和导数有很深的讨论。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; z-index:47; "><span class="stl_15 stl_11 stl_16">另外，为了方便理解，这里多次使用</span><span class="stl_17 stl_11 stl_20">不正规</span><span class="stl_15 stl_11 stl_21">的表述方式。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_03.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_03.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">玄学 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:27; "><span class="stl_15 stl_11 stl_22">求</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1959em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.4753em;">&nbsp;</span><span class="stl_23 stl_24 stl_26" style="word-spacing:-0.0313em;">= 0.233 ∗ 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_28">ꢀ</span></sup><span class="stl_15 stl_11 stl_29">在</span><span class="stl_23 stl_24 stl_30" style="word-spacing:0.044em;">푥 = 1</span><span class="stl_15 stl_11 stl_25">时的</span><span class="stl_17 stl_11 stl_31">切线斜率</span><span class="stl_15 stl_11 stl_31">。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 18.8019em; z-index:37; "><span class="stl_15 stl_11 stl_31">精度误差</span><span class="stl_23 stl_24 stl_32">0.001</span><span class="stl_15 stl_11 stl_33">即可</span><span class="stl_34 stl_11 stl_33">. &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_04.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_04.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_35">怎么做？ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:15; "><span class="stl_15 stl_11 stl_20">这题太神了怎么做？ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 19.1135em; z-index:35; "><span class="stl_15 stl_11 stl_36">二分求零点的方法也许给我们带来一些启示。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; z-index:37; "><span class="stl_15 stl_11 stl_09">考虑</span><span class="stl_17 stl_11 stl_25">逼近</span><span class="stl_15 stl_11 stl_25">。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_05.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_05.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:70.0783em;top: 34.0667em; "><span class="stl_37 stl_24 stl_25">푛</span></div>
+					<div class="stl_01" style="left:67.7883em;top: 34.7135em; z-index:17; "><span class="stl_38 stl_24 stl_25">1</span></div>
+					<div class="stl_01" style="left:67.7483em;top: 37.5676em; "><span class="stl_39 stl_24 stl_25">ꢁ</span></div>
+					<div class="stl_01" style="left:59.6383em;top: 36.2276em; "><span class="stl_39 stl_24 stl_40" style="word-spacing:0.6843em;">lim 1</span><span class="stl_39 stl_24 stl_25" style="word-spacing:-0.0336em;">&nbsp;</span><span class="stl_39 stl_24 stl_40" style="word-spacing:0.6843em;">+ &nbsp;</span></div>
+					<div class="stl_01" style="left:71.6883em;top: 36.2276em; "><span class="stl_39 stl_24 stl_25" style="word-spacing:0.0238em;">= 푒 &nbsp;</span></div>
+					<div class="stl_01" style="left:44.7258em;top: 35.0707em; "><span class="stl_10 stl_11 stl_12">极限 &nbsp;</span></div>
+					<div class="stl_01" style="left:59.2483em;top: 37.9507em; z-index:12; "><span class="stl_41 stl_24 stl_42">푛→∞ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_07.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_07.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">逼近 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_43">右图。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; z-index:19; "><span class="stl_15 stl_11 stl_44">我们从</span><span class="stl_34 stl_11 stl_45">AB</span><span class="stl_15 stl_11 stl_32">两个点作直线， &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 25.3218em; z-index:31; "><span class="stl_46 stl_11 stl_47">那么</span><span class="stl_48 stl_11 stl_49">AB</span><span class="stl_46 stl_11 stl_50">的斜率也许能</span><span class="stl_51 stl_11 stl_52">近似 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 27.846em; z-index:35; "><span class="stl_17 stl_11 stl_53">地</span><span class="stl_15 stl_11 stl_18">表示</span><span class="stl_34 stl_11 stl_45">C</span><span class="stl_15 stl_11 stl_32">点的切线斜率。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_10.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_10.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">更近 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:15; "><span class="stl_34 stl_11 stl_54">A</span><span class="stl_15 stl_11 stl_55">和</span><span class="stl_34 stl_11 stl_45">B</span><span class="stl_15 stl_11 stl_50">越来越近，那么</span><span class="stl_23 stl_24 stl_56">푘</span><sub style="top: 0.48em;"><span class="stl_27 stl_24 stl_57">퐴퐵</span></sub><span class="stl_15 stl_11 stl_20">相对于</span><span class="stl_34 stl_11 stl_18">C</span><span class="stl_15 stl_11 stl_58">点斜率就越来越接近。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_12.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_12.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_59">无限近 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:27; "><span class="stl_15 stl_11 stl_09">考虑</span><span class="stl_34 stl_11 stl_18">A</span><span class="stl_15 stl_11 stl_25">和</span><span class="stl_34 stl_11 stl_45">B</span><span class="stl_15 stl_11 stl_16">已经无限接近的情况。此时</span><span class="stl_34 stl_11 stl_18">A</span><span class="stl_15 stl_11 stl_29">、</span><span class="stl_34 stl_11 stl_45">B</span><span class="stl_15 stl_11 stl_29">、</span><span class="stl_34 stl_11 stl_45">C</span><span class="stl_17 stl_11 stl_60">简直要</span><span class="stl_15 stl_11 stl_32">重合，但 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 17.6283em; z-index:54; "><span class="stl_46 stl_11 stl_61">是并没有重合。</span><span class="stl_48 stl_11 stl_62">C</span><span class="stl_46 stl_11 stl_21">点切线斜率也</span><span class="stl_51 stl_11 stl_50">无限地</span><span class="stl_46 stl_11 stl_52">接近</span><span class="stl_63 stl_24 stl_64">푘</span><sub style="top: 0.4817em;"><span class="stl_27 stl_24 stl_57">퐴퐵</span></sub><span class="stl_46 stl_11 stl_65">。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_13.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_13.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">极限 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:16; "><span class="stl_15 stl_11 stl_66">从上面的阐述，我们对</span><span class="stl_17 stl_11 stl_25">极限</span><span class="stl_15 stl_11 stl_66">的概念已经有了简单的感觉…… &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 19.1135em; z-index:40; "><span class="stl_15 stl_11 stl_66">极限用于描述某个变量</span><span class="stl_17 stl_11 stl_61">趋于稳定</span><span class="stl_15 stl_11 stl_43">的取值。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.6344em; z-index:72; "><span class="stl_15 stl_11 stl_31">练习：当</span><span class="stl_23 stl_24 stl_67">푥</span><span class="stl_15 stl_11 stl_66">趋向于无穷大的时候，</span><sub style="top: 1.17em;"><span class="stl_27 stl_24 stl_68">ꢃ</span></sub><sup style="top: -1.3725em;"><span class="stl_69 stl_24 stl_70">ꢂ</span></sup><span class="stl_15 stl_11 stl_21">趋向于多少？ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_15.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_15.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:21.0017em;top: 4.5826em; z-index:8; "><span class="stl_71 stl_24 stl_25">ꢂ</span></div>
+					<div class="stl_01" style="left:7.32em;top: 5.9255em; "><span class="stl_72 stl_24 stl_25" style="word-spacing:0.2148em;">푓 푥</span><span class="stl_72 stl_24 stl_25" style="word-spacing:0.4966em;">&nbsp;</span><span class="stl_72 stl_24 stl_25" style="word-spacing:0.049em;">= </span><sub style="top: 2.0517em;"><span class="stl_73 stl_24 stl_25" style="word-spacing:0.0671em;">ꢃ &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:30.3983em;top: 17.5044em; z-index:12; "><span class="stl_15 stl_11 stl_22">当</span><span class="stl_23 stl_24 stl_67">푥</span><span class="stl_15 stl_11 stl_36">趋向于无穷大时， &nbsp;</span></div>
+					<div class="stl_01" style="left:30.3983em;top: 21.8677em; z-index:28; "><sub style="top: 1.17em;"><span class="stl_27 stl_24 stl_68">ꢃ</span></sub><sup style="top: -1.37em;"><span class="stl_27 stl_24 stl_74">ꢂ</span></sup><span class="stl_17 stl_11 stl_44">趋向于</span><span class="stl_75 stl_11 stl_45">0</span><span class="stl_34 stl_11 stl_45">. &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_16.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_16.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">符号 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1002em; z-index:30; "><span class="stl_15 stl_11 stl_53">以</span><span class="stl_76 stl_24 stl_77">lim</span><span class="stl_15 stl_11 stl_78">表示“趋近”。</span><span class="stl_76 stl_24 stl_79">lim</span><span class="stl_15 stl_11 stl_29">是</span><span class="stl_23 stl_24 stl_30">”limit”</span><span class="stl_15 stl_11 stl_32">的缩写。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 18.7919em; z-index:41; "><span class="stl_15 stl_11 stl_22">以</span><sub style="top: 1.41em;"><span class="stl_27 stl_24 stl_80">ꢃ</span></sub><span class="stl_23 stl_24 stl_81">l</span><span class="stl_23 stl_24 stl_82">i</span><sub style="top: 1.41em;"><span class="stl_27 stl_24 stl_83">→</span></sub><span class="stl_23 stl_24 stl_84">m</span><sub style="top: 1.41em;"><span class="stl_27 stl_24 stl_25" style="word-spacing:0.002em;">푎 </span></sub><span class="stl_23 stl_24 stl_85">푓(푥)</span><span class="stl_15 stl_11 stl_60">表示当</span><span class="stl_23 stl_24 stl_67">푥</span><span class="stl_15 stl_11 stl_20">趋向于</span><span class="stl_23 stl_24 stl_70">ꢄ</span><span class="stl_15 stl_11 stl_25">时，</span><span class="stl_23 stl_24 stl_86">푓(푥)</span><span class="stl_17 stl_11 stl_19">趋向于多少</span><span class="stl_15 stl_11 stl_19">。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.9244em; "><span class="stl_15 stl_11 stl_31">注意，是</span><span class="stl_23 stl_24 stl_87">푓(푥)</span><span class="stl_15 stl_11 stl_16">趋向于多少，不是</span><span class="stl_23 stl_24 stl_86">푓(푥)</span><span class="stl_15 stl_11 stl_50">等于多少！ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_17.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_17.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">练习 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.44em;top: 15.1402em; "><span class="stl_23 stl_24 stl_88" style="word-spacing:0.0623em;">lim 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_25" style="word-spacing:0.189em;">ꢀ </span></sup><span class="stl_23 stl_24 stl_25" style="word-spacing:0.3541em;">= </span><span class="stl_89 stl_24 stl_25" style="word-spacing:0.3541em;">ꢅ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 17.1469em; z-index:10; "><span class="stl_90 stl_24 stl_91">ꢃ→∞ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.44em;top: 23.2919em; "><span class="stl_23 stl_24 stl_92" style="word-spacing:0.0456em;">lim 푙ꢁ(푥) = &nbsp;</span></div>
+					<div class="stl_01" style="left:20.4417em;top: 23.3241em; z-index:28; "><span class="stl_93 stl_24 stl_52">−ꢅ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 25.2986em; z-index:19; "><span class="stl_90 stl_24 stl_91">ꢃ→∞ &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_18.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_18.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:60.5383em;top: 36.1397em; "><span class="stl_38 stl_24 stl_94">푓</span><sup style="top: -0.73em;"><span class="stl_95 stl_24 stl_25" style="word-spacing:0.3785em;">′ </span></sup><span class="stl_38 stl_24 stl_25" style="word-spacing:0.4715em;">푥 =</span><span class="stl_38 stl_24 stl_25" style="word-spacing:0.0269em;">&nbsp;</span><span class="stl_38 stl_24 stl_22" style="word-spacing:-0.0195em;">2푥 + 3 &nbsp;</span></div>
+					<div class="stl_01" style="left:44.7258em;top: 35.0707em; "><span class="stl_10 stl_11 stl_12">导数 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_19.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_19.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">切线 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:24; "><span class="stl_15 stl_11 stl_19">学会了极限的概念，我们来重新看一看切线： &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 18.8019em; z-index:30; "><span class="stl_23 stl_24 stl_86">푓(푥)</span><span class="stl_15 stl_11 stl_25">在</span><span class="stl_23 stl_24 stl_67">푥</span><span class="stl_15 stl_11 stl_32">的切线斜率是： &nbsp;</span></div>
+					<div class="stl_01" style="left:36.3342em;top: 24.84em; z-index:53; "><span class="stl_63 stl_24 stl_25" style="word-spacing:0.195em;">푓 푥</span><span class="stl_63 stl_24 stl_25" style="word-spacing:0.0025em;">&nbsp;</span><span class="stl_63 stl_24 stl_96" style="word-spacing:-0.0322em;">+ ꢇ푥</span><span class="stl_63 stl_24 stl_25" style="word-spacing:0.4181em;">&nbsp;</span><span class="stl_63 stl_24 stl_97" style="word-spacing:-0.0719em;">− 푓(푥) &nbsp;</span></div>
+					<div class="stl_01" style="left:26.9342em;top: 26.6044em; z-index:44; "><span class="stl_23 stl_24 stl_25" style="word-spacing:0.0426em;">푘 = </span><sub style="top: 1.41em;"><span class="stl_27 stl_24 stl_98">Δ</span></sub><span class="stl_23 stl_24 stl_99">l</span><sub style="top: 1.41em;"><span class="stl_27 stl_24 stl_100">ꢃ</span></sub><span class="stl_23 stl_24 stl_77">i</span><span class="stl_23 stl_24 stl_101">m</span><sub style="top: 1.41em;"><span class="stl_27 stl_24 stl_102">→ꢆ &nbsp;</span></sub></div>
+					<div class="stl_01" style="left:43.7058em;top: 28.1644em; "><span class="stl_23 stl_24 stl_36">ꢇ푥 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 34.926em; z-index:84; "><span class="stl_15 stl_11 stl_66">大意是：我们搞一个点</span><span class="stl_23 stl_24 stl_47" style="word-spacing:-0.0891em;">(푥ꢈ, 푓</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1943em;">&nbsp;</span><span class="stl_23 stl_24 stl_31" style="word-spacing:0.1938em;">푥 )</span><span class="stl_15 stl_11 stl_22">，</span><span class="stl_23 stl_24 stl_49">푥ꢈ</span><span class="stl_15 stl_11 stl_25">只比</span><span class="stl_23 stl_24 stl_67">푥</span><span class="stl_15 stl_11 stl_32">稍微大一点点，那么这 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 37.7577em; z-index:100; "><span class="stl_17 stl_11 stl_66">两个点的连线</span><span class="stl_15 stl_11 stl_36">就是原函数的</span><span class="stl_17 stl_11 stl_18">切线</span><span class="stl_15 stl_11 stl_18">。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_20.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_20.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_35">切线斜率 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:26; "><span class="stl_15 stl_11 stl_20">我们定义导数，用它来表示函数</span><span class="stl_17 stl_11 stl_96">切线</span><span class="stl_15 stl_11 stl_32">的斜率。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.8035em; "><span class="stl_15 stl_11 stl_60">规定两个概念： &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.1744em; z-index:49; "><span class="stl_15 stl_11 stl_19">原函数</span><span class="stl_23 stl_24 stl_87">푓(푥)</span><span class="stl_15 stl_11 stl_36" style="word-spacing:1.4961em;">： 最初入手的函数。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 29.8644em; z-index:52; "><span class="stl_15 stl_11 stl_19">导函数</span><span class="stl_23 stl_24 stl_42">푓ꢈ(푥)</span><span class="stl_15 stl_11 stl_18" style="word-spacing:1.2661em;">： 表示</span><span class="stl_17 stl_11 stl_16">原函数的切线斜率</span><span class="stl_15 stl_11 stl_32">的函数。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 37.5577em; z-index:84; "><span class="stl_15 stl_11 stl_47">具体参见数学《选修</span><span class="stl_34 stl_11 stl_22">2-2</span><span class="stl_15 stl_11 stl_20">》教材。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_22.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_22.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">例子 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:9; "><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1966em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.4753em;">&nbsp;</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.0871em;">= 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_104" style="word-spacing:-0.1194em;">ꢀ &nbsp;</span></sup></div>
+					<div class="stl_01" style="left:7.02em;top: 18.8019em; z-index:17; "><span class="stl_23 stl_24 stl_105">푓</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_25" style="word-spacing:0.3818em;">′ </span></sup><span class="stl_23 stl_24 stl_25" style="word-spacing:0.471em;">푥 =</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.0287em;">&nbsp;</span><span class="stl_23 stl_24 stl_30">2푥 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.1744em; z-index:25; "><span class="stl_15 stl_11 stl_31">所以，原函数在</span><span class="stl_23 stl_24 stl_106">푥</span><span class="stl_15 stl_11 stl_25">处的 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 29.8644em; z-index:34; "><span class="stl_15 stl_11 stl_32">切线斜率是</span><span class="stl_23 stl_24 stl_107">2푥</span><span class="stl_15 stl_11 stl_107">。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_23.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_23.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">性质 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:33; "><span class="stl_15 stl_11 stl_09">如果</span><span class="stl_23 stl_24 stl_42">푓ꢈ(푥)</span><span class="stl_15 stl_11 stl_32">在某个区间为负，那么</span><span class="stl_23 stl_24 stl_86">푓(푥)</span><span class="stl_15 stl_11 stl_36">在这个区间递减。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 19.1135em; "><span class="stl_15 stl_11 stl_31">反之递增。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.1744em; z-index:67; "><span class="stl_15 stl_11 stl_32">因为：如果</span><span class="stl_23 stl_24 stl_87">푓(푥)</span><span class="stl_15 stl_11 stl_108">在</span><span class="stl_23 stl_24 stl_67">푥</span><span class="stl_15 stl_11 stl_22">处的切线斜率为负，那么这个切线是向下 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 29.016em; z-index:69; "><span class="stl_15 stl_11 stl_09">走的</span><span class="stl_17 stl_11 stl_32">（大概意思理解就好）</span><span class="stl_15 stl_11 stl_32">。 &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_24.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_24.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">求导多次函数 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; "><span class="stl_15 stl_11 stl_58">时间关系，我们只讲如何求导多次函数。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.4919em; z-index:33; "><span class="stl_15 stl_11 stl_09">对于</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1959em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.471em;">&nbsp;</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.0828em;">= 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_109">푝</span></sup><span class="stl_15 stl_11 stl_50">，它的导函数是</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.1325em;">ꢉ ∗ 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_110">푝ꢊꢂ</span></sup><span class="stl_34 stl_11 stl_88">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; "><span class="stl_15 stl_11 stl_20">（指数移一个下来） &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 33.5525em; z-index:75; "><span class="stl_46 stl_11 stl_50">例如：</span><span class="stl_63 stl_24 stl_25" style="word-spacing:0.1951em;">푓 푥</span><span class="stl_63 stl_24 stl_25" style="word-spacing:0.4742em;">&nbsp;</span><span class="stl_63 stl_24 stl_111" style="word-spacing:-0.087em;">= 푥</span><sup style="top: -0.85em;"><span class="stl_69 stl_24 stl_112">4</span></sup><span class="stl_48 stl_11 stl_113">,</span><span class="stl_46 stl_11 stl_52">则</span><span class="stl_63 stl_24 stl_52" style="word-spacing:0.1668em;">푓ꢈ 푥</span><span class="stl_63 stl_24 stl_25" style="word-spacing:0.4751em;">&nbsp;</span><span class="stl_63 stl_24 stl_114" style="word-spacing:-0.0269em;">= ꢋ푥</span><sup style="top: -0.85em;"><span class="stl_69 stl_24 stl_115">ꢌ</span></sup><span class="stl_48 stl_11 stl_116">. &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_25.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_25.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:4; "><span class="stl_15 stl_11 stl_09">对于</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1959em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.471em;">&nbsp;</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.1117em;">= ꢄ ∗ 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_117">푝</span></sup><span class="stl_15 stl_11 stl_22">，它的导函数是</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.1359em;">a ∗ ꢉ ∗ 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_110">푝ꢊꢂ</span></sup><span class="stl_34 stl_11 stl_88">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 22.4919em; z-index:50; "><span class="stl_15 stl_11 stl_19">例如：</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1959em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.4753em;">&nbsp;</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.1202em;">= 3 ∗ 푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_28">ꢀ</span></sup><span class="stl_34 stl_11 stl_18">,</span><span class="stl_15 stl_11 stl_25">则</span><span class="stl_23 stl_24 stl_94">푓</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_25" style="word-spacing:0.3818em;">′ </span></sup><span class="stl_23 stl_24 stl_25" style="word-spacing:0.471em;">푥 =</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.0287em;">&nbsp;</span><span class="stl_23 stl_24 stl_107" style="word-spacing:-0.0576em;">3 ∗ 2푥</span><span class="stl_34 stl_11 stl_107" style="word-spacing:-0.0576em;">. &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_26.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_26.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.02em;top: 15.1102em; z-index:17; "><span class="stl_15 stl_11 stl_09">对于</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1959em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.471em;">&nbsp;</span><span class="stl_23 stl_24 stl_118" style="word-spacing:-0.0279em;">= ꢄ푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_25" style="word-spacing:0.1265em;">푝 </span></sup><span class="stl_23 stl_24 stl_119" style="word-spacing:-0.0835em;">+ 푏푥</span><sup style="top: -0.85em;"><span class="stl_27 stl_24 stl_25" style="word-spacing:0.1396em;">푞 </span></sup><span class="stl_23 stl_24 stl_25" style="word-spacing:-0.0271em;">+ ⋯ &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 19.1135em; "><span class="stl_15 stl_11 stl_36">对每一项求导，然后加起来。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.1744em; z-index:58; "><span class="stl_15 stl_11 stl_19">例如：</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.1959em;">푓 푥</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.4753em;">&nbsp;</span><span class="stl_23 stl_24 stl_103" style="word-spacing:-0.0871em;">= 푥</span><sup style="top: -0.8525em;"><span class="stl_69 stl_24 stl_25" style="word-spacing:0.1188em;">ꢌ </span></sup><span class="stl_23 stl_24 stl_120" style="word-spacing:-0.0871em;">+ 6푥</span><sup style="top: -0.8525em;"><span class="stl_69 stl_24 stl_25" style="word-spacing:0.4992em;">ꢀ </span></sup><span class="stl_34 stl_11 stl_25" style="word-spacing:0em;">, </span><span class="stl_15 stl_11 stl_25">则</span><span class="stl_23 stl_24 stl_94">푓</span><sup style="top: -0.8525em;"><span class="stl_69 stl_24 stl_25" style="word-spacing:0.3806em;">′ </span></sup><span class="stl_23 stl_24 stl_25" style="word-spacing:0.4717em;">푥 =</span><span class="stl_23 stl_24 stl_25" style="word-spacing:0.0287em;">&nbsp;</span><span class="stl_23 stl_24 stl_120">2푥</span><sup style="top: -0.8525em;"><span class="stl_69 stl_24 stl_25" style="word-spacing:0.1115em;">ꢀ </span></sup><span class="stl_23 stl_24 stl_121" style="word-spacing:-0.047em;">+ 12푥</span><span class="stl_34 stl_11 stl_121" style="word-spacing:-0.047em;">. &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 33.8643em; z-index:62; "><span class="stl_46 stl_11 stl_50">注意：</span><span class="stl_51 stl_11 stl_122">常数项的导数是</span><span class="stl_123 stl_11 stl_19">0</span><span class="stl_48 stl_11 stl_19">. &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_27.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_27.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:7.32em;top: 6.2928em; "><span class="stl_13 stl_11 stl_14">求导其它函数 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 15.4318em; z-index:16; "><span class="stl_15 stl_11 stl_47">具体参见数学书。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 19.1135em; "><span class="stl_15 stl_11 stl_58">有一个叫做“导数表”的东西，背一背有好处的。 &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 26.496em; z-index:60; "><span class="stl_15 stl_11 stl_16">对导数的更深讨论，请参见</span><span class="stl_34 stl_11 stl_50">riteme</span><span class="stl_15 stl_11 stl_32">的博客： &nbsp;</span></div>
+					<div class="stl_01" style="left:7.02em;top: 29.9085em; z-index:125; "><a href="http://riteme.github.io/blog/2016-6-23/limit-and-derivative.html" target="_blank"><span class="stl_124 stl_08 stl_62">http://riteme.github.io/blog/2016-6-23/limit-and-derivative.html &nbsp;</span></a></div>
+				</div>
+			</div>
+		</div>
+		<div class="stl_02">
+			<div class="stl_03">
+				<object data="导数.pdf_files/img_28.svg" type="image/svg+xml" class="stl_04" style="position:absolute; width:80em; height:45em;">
+					<embed src="导数.pdf_files/img_28.svg" type="image/svg+xml" />
+				</object>
+			</div>
+			<div class="stl_view">
+				<div class="stl_05 stl_06">
+					<div class="stl_01" style="left:57.1058em;top: 36.2062em; "><span class="stl_07 stl_08 stl_09">blue &nbsp;</span></div>
+					<div class="stl_01" style="left:46.6458em;top: 35.0648em; "><span class="stl_125 stl_11 stl_126">END &nbsp;</span></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
