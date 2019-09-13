@@ -1,0 +1,274 @@
+sup {
+	top: -0.4em;
+	vertical-align: baseline;
+	position: relative;
+}
+sub {
+	top: 0.4em;
+	vertical-align: baseline;
+	position: relative;
+}
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+@media screen and (min-device-pixel-ratio:0), (-webkit-min-device-pixel-ratio:0), (min--moz-device-pixel-ratio: 0) {.stl_view{ font-size:10em; transform:scale(0.1); -moz-transform:scale(0.1); -webkit-transform:scale(0.1); -moz-transform-origin:top left; -webkit-transform-origin:top left; } }
+.layer { }.ie { font-size: 1pt; }
+.ie body { font-size: 12em; }
+@media print{.stl_view {font-size:1em; transform:scale(1);}}
+.stl_01 {
+	position: absolute;
+	white-space: nowrap;
+}
+.stl_02 {
+	height: 45em;
+	font-size: 1em;
+	margin: 0em;
+	line-height: 0.0em;
+	display: block;
+	border-style: none;
+	width: 80em;
+}
+
+@supports(-ms-ime-align:auto) { .stl_02 {overflow: hidden;}}
+.stl_03 {
+	position: relative;
+}
+.stl_04 {
+	left: 0em;
+	position: absolute;
+	top: 0em;
+}
+.stl_05 {
+	position: relative;
+	width: 80em;
+}
+.stl_06 {
+	height: 4.5em;
+}
+.ie .stl_06 {
+	height: 45em;
+}
+@font-face {
+	font-family:"AQDGMA+Consolas";
+	src:url("c22160a3-0000-0000-0000-000000000000.woff") format("woff");
+}
+.stl_07 {
+	font-size: 2em;
+	font-family: "AQDGMA+Consolas";
+	color: #0D0D0D;
+}
+.stl_08 {
+	line-height: 1.041992em;
+}
+.stl_09 {
+	letter-spacing: 0.0002em;
+}
+
+.ie .stl_09 {
+	letter-spacing: 0.0063px;
+}
+@font-face {
+	font-family:"KILFLW+FangSong";
+	src:url("f51025cb-0000-0000-0000-000000000000.woff") format("woff");
+}
+.stl_10 {
+	font-size: 4.158333em;
+	font-family: "KILFLW+FangSong";
+	color: #0D0D0D;
+}
+.stl_11 {
+	line-height: 1em;
+}
+.stl_12 {
+	letter-spacing: 0.0421em;
+}
+
+.ie .stl_12 {
+	letter-spacing: 2.8px;
+}
+@font-face {
+	font-family:"BNULTL+GungsuhChe";
+	src:url("eea80049-0000-0000-0000-000000000000.woff") format("woff");
+}
+.stl_13 {
+	font-size: 4.158333em;
+	font-family: "BNULTL+GungsuhChe";
+	color: #0D0D0D;
+}
+.stl_14 {
+	letter-spacing: 0.0411em;
+}
+
+.ie .stl_14 {
+	letter-spacing: 2.7333px;
+}
+.stl_15 {
+	font-size: 4.5em;
+	font-family: "KILFLW+FangSong";
+	color: #0D0D0D;
+}
+.stl_16 {
+	letter-spacing: 0.0185em;
+}
+
+.ie .stl_16 {
+	letter-spacing: 1.3333px;
+}
+.stl_17 {
+	font-size: 2.341667em;
+	font-family: "KILFLW+FangSong";
+	color: #000000;
+}
+.stl_18 {
+	letter-spacing: -0.0036em;
+}
+
+.ie .stl_18 {
+	letter-spacing: -0.1333px;
+}
+.stl_19 {
+	font-size: 4.5em;
+	font-family: "BNULTL+GungsuhChe";
+	color: #0D0D0D;
+}
+.stl_20 {
+	font-size: 2em;
+	font-family: "KILFLW+FangSong";
+	color: #0D0D0D;
+}
+.stl_21 {
+	letter-spacing: 0em;
+}
+
+.ie .stl_21 {
+	letter-spacing: 0px;
+}
+.stl_22 {
+	letter-spacing: -0.0031em;
+}
+
+.ie .stl_22 {
+	letter-spacing: -0.1143px;
+}
+.stl_23 {
+	letter-spacing: -0.0018em;
+}
+
+.ie .stl_23 {
+	letter-spacing: -0.0667px;
+}
+.stl_24 {
+	letter-spacing: -0.0027em;
+}
+
+.ie .stl_24 {
+	letter-spacing: -0.1px;
+}
+@font-face {
+	font-family:"TQCOBL+Consolas-Bold";
+	src:url("f2d08176-0000-0000-0000-000000000000.woff") format("woff");
+}
+.stl_25 {
+	font-size: 2.341667em;
+	font-family: "TQCOBL+Consolas-Bold";
+	color: #000000;
+}
+.stl_26 {
+	letter-spacing: -0.003em;
+}
+
+.ie .stl_26 {
+	letter-spacing: -0.1128px;
+}
+.stl_27 {
+	font-size: 2.341667em;
+	font-family: "KILFLW+FangSong";
+	color: #FF0000;
+}
+.stl_28 {
+	letter-spacing: -0.0035em;
+}
+
+.ie .stl_28 {
+	letter-spacing: -0.1304px;
+}
+.stl_29 {
+	font-size: 1.5em;
+	font-family: "KILFLW+FangSong";
+	color: #000000;
+}
+.stl_30 {
+	letter-spacing: -0.0032em;
+}
+
+.ie .stl_30 {
+	letter-spacing: -0.12px;
+}
+.stl_31 {
+	letter-spacing: -0.0023em;
+}
+
+.ie .stl_31 {
+	letter-spacing: -0.0848px;
+}
+.stl_32 {
+	letter-spacing: -0.0028em;
+}
+
+.ie .stl_32 {
+	letter-spacing: -0.1067px;
+}
+.stl_33 {
+	font-size: 2em;
+	font-family: "KILFLW+FangSong";
+	color: #000000;
+}
+.stl_34 {
+	font-size: 2em;
+	font-family: "KILFLW+FangSong";
+	color: #FF0000;
+}
+.stl_35 {
+	letter-spacing: -0.0034em;
+}
+
+.ie .stl_35 {
+	letter-spacing: -0.1259px;
+}
+.stl_36 {
+	letter-spacing: -0.0025em;
+}
+
+.ie .stl_36 {
+	letter-spacing: -0.0933px;
+}
+.stl_37 {
+	font-size: 2em;
+	font-family: "AQDGMA+Consolas";
+	color: #000000;
+}
+.stl_38 {
+	font-size: 2em;
+	font-family: "AQDGMA+Consolas";
+	color: #00B0F0;
+}
+.stl_39 {
+	font-size: 2em;
+	font-family: "AQDGMA+Consolas";
+	color: #FF0000;
+}
+@font-face {
+	font-family:"OAHROQ+MicrosoftYaHei";
+	src:url("b32b622b-0000-0000-0000-000000000000.woff") format("woff");
+}
+.stl_40 {
+	font-size: 1.158333em;
+	font-family: "OAHROQ+MicrosoftYaHei", "Times New Roman";
+	color: #000000;
+}
+.stl_41 {
+	letter-spacing: 0.0072em;
+}
+
+.ie .stl_41 {
+	letter-spacing: 0.1333px;
+}
